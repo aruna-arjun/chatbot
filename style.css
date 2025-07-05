@@ -1,0 +1,148 @@
+/* --- Key Changes --- */
+/* Import a modern, friendly font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    /* NEW: Soft lavender gradient background */
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* Text color for the light theme */
+    color: #2c3e50; 
+}
+
+#chat-container {
+    width: 100%;
+    max-width: 600px;
+    height: 90vh;
+    max-height: 800px;
+    
+    /* "Glassmorphism" effect for light backgrounds */
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(100, 100, 135, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#chat-window {
+    flex-grow: 1;
+    padding: 20px 30px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Custom scrollbar for the light theme */
+#chat-window::-webkit-scrollbar {
+    width: 8px;
+}
+#chat-window::-webkit-scrollbar-track {
+    background: transparent;
+}
+#chat-window::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.message {
+    max-width: 75%;
+    padding: 12px 18px;
+    border-radius: 20px;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.message pre {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.bot-message {
+    /* Soft, light grey for bot messages */
+    background-color: #f1f0f5;
+    color: #34495e;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+.user-message {
+    /* A vibrant purple gradient for user messages */
+    background: linear-gradient(45deg, #8e44ad, #9b59b6);
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+#input-container {
+    display: flex;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+#user-input {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #2c3e50;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#user-input::placeholder {
+    color: #95a5a6;
+}
+
+#user-input:focus {
+    border-color: #8e44ad;
+}
+
+/* --- NEW BUTTON STYLE --- */
+#send-btn {
+    /* White button background as requested */
+    background: #ffffff;
+    /* A nice lavender color for the text */
+    color: #8e44ad; 
+    font-weight: 600;
+    border: 1px solid #ddd;
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+#send-btn:hover {
+    /* On hover, give it a subtle shadow and lift */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-color: #8e44ad;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #chat-container {
+        height: 100vh;
+        max-height: none;
+        border-radius: 0;
+        border: none;
+    }
+}
