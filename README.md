@@ -44,8 +44,11 @@
 2.  **Type a message** into the input field at the bottom of the chat window.
 3.  **Send the message** by pressing the "Send" button or hitting the "Enter" key.
 4.  **Explore its knowledge** by asking questions like:
-    *   `Hello`
-    *   `What is HTML?`
-    *   `Show me Java syntax`
-    *   `What time is it?`
-    *   `help` (to see a list of things it can do)
+*   `hello`
+*   `What is HTML?`
+*   `python syntax`
+*   `sql select`
+*   `What is a process in os?`
+*   `What is encapsulation in Java?`
+*   `help` (to see more examples)
+s
