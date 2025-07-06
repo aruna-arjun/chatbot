@@ -1,4 +1,4 @@
-# 🤖 Simple AI Chatbot
+# 🤖 Simple Chatbot
 
 *   Built entirely with HTML, CSS, and JavaScript, ensuring clean and dependency-free code.
 *   Responsive and visually clean design for a smooth user experience on any device.
@@ -51,4 +51,3 @@
 *   `What is a process in os?`
 *   `What is encapsulation in Java?`
 *   `help` (to see more examples)
-s
